@@ -1,9 +1,9 @@
-FROM postgres:11
+FROM postgres:11-bullseye
 
 LABEL maintainer="Neiro MC neiromc@gmail.com"
 
 RUN apt update \
-  && apt install -y postgresql-11-repack \
+  && apt install -y postgresql-11-repack python \
   && apt-get -f install \
   && apt-get -y autoremove \
   && apt-get -y clean \
